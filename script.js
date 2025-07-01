@@ -56,7 +56,7 @@ function iniciarCuentaRegresiva(fechaEvento) {
 }
 
 // Fecha del evento
-const fechaEvento = new Date('2025-07-31T20:00:00').getTime();
+const fechaEvento = new Date('2025-07-31T00:00:00').getTime();
 iniciarCuentaRegresiva(fechaEvento);
 
 // 👇 Esto evita que el navegador mantenga el scroll antiguo

@@ -54,6 +54,7 @@
   }
   .hero h2 {
     font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
     margin-bottom: 10px;
   }
   .hero p {
@@ -263,5 +264,3 @@
     font-size: 1rem;
     color: #444;
   }
-  
-  
