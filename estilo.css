@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  /* Carta */
+  #carta-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #f8f0f8;
+  }
+  #carta {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+  #carta:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Ocultar contenido al inicio */
+  .oculto {
+    display: none;
+  }
+  
+  /* Secciones de la invitación */
+  section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .hero {
+    background: url('Imagenes/fondo2.png') no-repeat center center/cover;
+    color: white;
+  }
+  .hero h1 {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  .ubicacion {
+    margin: 40px 0;
+    background-color: white;
+    color: #444;
+    padding: 20px 20px;  
+    min-height: auto;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ubicacion i {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #a33c8c;
+  }
+  
+  .ubicacion h2 {
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+  }
+  
+  .ubicacion p {
+    font-size: 1rem;
+    margin: 0;
+  }
+  
+  .seccion-imagen {
+    background: url('Imagenes/portada.png') no-repeat center center/cover;
+    color: white;
+  }
+  
+  /* Animación scroll */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    filter: blur(6px);
+    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+  }
+  
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+
+  .cuenta-regresiva {
+    margin: 60px 0;
+    min-height: auto; 
+    background: white;
+    color: #111;
+    text-align: center;
+  }
+  
+  .cuenta-regresiva h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  .contador {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap; /* por si es pantalla pequeña */
+  }
+  
+  .digito {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    border-radius: 6px;
+    padding: 12px 10px;
+    min-width: 60px;
+    color: white;
+    font-family: 'Georgia', serif;
+  }
+  
+  .digito div {
+    font-size: 2rem;
+  }
+  
+  .digito p {
+    font-size: 0.8rem;
+    margin-top: 6px;
+    color: #ccc;
+  }
+  
+  .mapa {
+    background: #fff;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .mapa h2 {
+    font-size: 1.4rem;
+    margin-bottom: 6px;
+    color: #a33c8c;
+  }
+  
+  .mapa p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .contenedor-mapa {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .btn-maps {
+    display: inline-block;
+    margin-top: 20px;
+    background: #a33c8c;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .btn-maps:hover {
+    background: #8b316f;
+  }
+  
+  .itinerario {
+  margin: 10px 0;
+  min-height: auto; 
+  background: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.itinerario h2 {
+  font-size: 1.6rem;
+  margin-bottom: 30px;
+  color: #222;
+}
+
+.linea-tiempo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    margin: 0 auto;
+    max-width: 300px;
+    padding-left: 40px;
+  }
+  
+  .evento {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+  
+  .hora {
+    width: 70px;
+    text-align: right;
+    margin-right: 10px;
+    font-size: 1rem;
+    font-family: 'Georgia', serif;
+    color: #333;
+    white-space: nowrap;
+  }
+  
+  .punto {
+    width: 12px;
+    height: 12px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+  }
+  
+  .punto::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px; /* Altura de la línea entre puntos */
+    background: black;
+  }
+
+  .evento:last-child .punto::after {
+    display: none;
+  }
+  
+  .detalle {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  
