@@ -2,7 +2,6 @@ const carta = document.getElementById('carta');
 const cartaContainer = document.getElementById('carta-container');
 const contenido = document.getElementById('contenido');
 
-// Al hacer clic en la carta
 carta.addEventListener('click', () => {
   cartaContainer.style.opacity = '0';
   cartaContainer.style.transition = 'opacity 0.6s ease';
@@ -14,7 +13,6 @@ carta.addEventListener('click', () => {
   }, 600);
 });
 
-// Mostrar animaciones al hacer scroll
 function activarAnimaciones() {
   const elementos = document.querySelectorAll('.fade-up');
   const opciones = { threshold: 0.1 };
@@ -24,7 +22,7 @@ function activarAnimaciones() {
       if (entrada.isIntersecting) {
         entrada.target.classList.add('visible');
       } else {
-        entrada.target.classList.remove('visible'); // <- permite reiniciar la animación
+        entrada.target.classList.remove('visible');
       }
     });
   }, opciones);
@@ -55,16 +53,30 @@ function iniciarCuentaRegresiva(fechaEvento) {
   }, 1000);
 }
 
-// Fecha del evento
 const fechaEvento = new Date('2025-07-31T00:00:00').getTime();
 iniciarCuentaRegresiva(fechaEvento);
 
-// 👇 Esto evita que el navegador mantenga el scroll antiguo
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
 
-// 👇 Esto fuerza que se inicie en la parte superior
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
+});
+
+document.getElementById('formulario-confirmacion').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById('nombre').value;
+  const asistencia = document.getElementById('asistencia').value;
+  const mensaje = `Hola, soy ${nombre}. ${asistencia} a la fiesta de XV años .`;
+
+  document.getElementById('bloque-confirmacion').style.display = 'none';
+
+  const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
+  mensajeConfirmacion.textContent = `¡Gracias, ${nombre} Por "${asistencia}"`;
+  mensajeConfirmacion.style.display = 'block';
+
+  const url = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;
+  window.open(url, '_blank');
 });

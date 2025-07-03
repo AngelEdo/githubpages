@@ -8,7 +8,6 @@
     scroll-behavior: smooth;
   }
   
-  /* Carta */
   #carta-container {
     display: flex;
     justify-content: center;
@@ -27,12 +26,10 @@
     transform: scale(1.05);
   }
   
-  /* Ocultar contenido al inicio */
   .oculto {
     display: none;
   }
   
-  /* Secciones de la invitación */
   section {
     min-height: 100vh;
     display: flex;
@@ -42,76 +39,41 @@
     padding: 40px 20px;
     text-align: center;
   }
-  
-  .hero {
-    background: url('Imagenes/fondo2.png') no-repeat center center/cover;
-    color: white;
-  }
-  .hero h1 {
-    font-size: 4rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
-  }
-  .hero h2 {
-    font-size: 2rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
-  }
-  .hero p {
-    font-size: 1.2rem;
-  }
-  
-  .ubicacion {
-    margin: 40px 0;
-    background-color: white;
-    color: #444;
-    padding: 20px 20px;  
-    min-height: auto;    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .ubicacion i {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
-    color: #a33c8c;
-  }
-  
-  .ubicacion h2 {
-    font-size: 1.2rem;
-    margin-bottom: 6px;
-  }
-  
-  .ubicacion p {
-    font-size: 1rem;
-    margin: 0;
-  }
-  
-  .seccion-imagen {
-    background: url('Imagenes/portada.png') no-repeat center center/cover;
-    color: white;
-  }
-  
-  /* Animación scroll */
+
   .fade-up {
     opacity: 0;
     transform: translateY(30px);
     filter: blur(6px);
     transition: opacity 1s ease, transform 1s ease, filter 1s ease;
   }
-  
   .fade-up.visible {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
   }
-
+  
+  .portada {
+    background: url('https://wallpapercave.com/wp/wp6805988.jpg') no-repeat center center/cover;
+    color: white;
+  }
+  .portada h1 {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .portada h2 {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .portada p {
+    font-size: 1.2rem;
+  }
+  
   .cuenta-regresiva {
-    margin: 60px 0;
+    padding: 80px 0;
     min-height: auto; 
-    background: white;
+    background-color: rgb(197, 191, 191);
     color: #111;
     text-align: center;
   }
@@ -125,7 +87,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    flex-wrap: wrap; /* por si es pantalla pequeña */
+    flex-wrap: wrap;
   }
   
   .digito {
@@ -149,38 +111,92 @@
     margin-top: 6px;
     color: #ccc;
   }
+
+  .seccion-imagen {
+    background: url('Imagenes/portada.png') no-repeat center center/cover;
+    color: white;
+  }
   
+  .codigo-vestimenta {
+    background-color: rgb(197, 191, 191);
+    color: #000000;
+    padding: 80px 20px;  
+    min-height: auto;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-vestimenta {
+    width: 100px;
+    height: auto;
+    margin: 10px 0;
+  }
+  .codigo-vestimenta h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  .codigo-vestimenta p {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .padrinos {
+    background: url('Imagenes/fondo2.png') no-repeat center center/cover;
+    color: white;
+  }
+  .padrinos h1 {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .padrinos h2 {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .padrinos p {
+    font-size: 1.2rem;
+  }
+
   .mapa {
-    background: #fff;
+    background-color: rgb(255, 255, 255);
     text-align: center;
     padding: 40px 20px;
   }
-  
+  .mapa-salon {
+    min-height: auto;
+    background-color: rgb(185, 185, 185);
+  }
+  .mapa-ceremonia {
+    padding: auto;
+    min-height: auto;
+    background-color: rgb(185, 185, 185);
+  }
   .mapa h2 {
     font-size: 1.4rem;
     margin-bottom: 6px;
-    color: #a33c8c;
+    color: #000000;
   }
-  
   .mapa p {
     font-size: 1rem;
     margin-bottom: 20px;
     color: #555;
   }
-  
   .contenedor-mapa {
-    width: 100%;
+    height: auto;
+    max-height: 200px;
+    width: auto;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  
   .btn-maps {
     display: inline-block;
     margin-top: 20px;
-    background: #a33c8c;
+    background: #252525;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -188,26 +204,38 @@
     font-weight: bold;
     transition: background 0.3s ease;
   }
-  
   .btn-maps:hover {
-    background: #8b316f;
+    background: #000000;
+  }
+
+  .regalos {
+    background: url('https://tse3.mm.bing.net/th/id/OIP.CYzm_Pix9jCmjUbLIflcKQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    color: white;
+  }
+  .regalos h1 {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .regalos h2 {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    margin-bottom: 10px;
+  }
+  .regalos p {
+    font-size: 1.2rem;
   }
   
   .itinerario {
-  margin: 10px 0;
-  min-height: auto; 
-  background: #fff;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.itinerario h2 {
-  font-size: 1.6rem;
-  margin-bottom: 30px;
-  color: #222;
-}
-
-.linea-tiempo {
+    padding: 6%;
+    min-height: auto;
+    text-align: center;
+   }
+  .itinerario h2 {
+     font-size: 1.6rem;
+     margin-bottom: 30px;
+  }
+  .linea-tiempo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -215,15 +243,13 @@
     margin: 0 auto;
     max-width: 300px;
     padding-left: 40px;
-  }
-  
+  } 
   .evento {
     position: relative;
     display: flex;
     align-items: flex-start;
     margin-bottom: 50px;
   }
-  
   .hora {
     width: 70px;
     text-align: right;
@@ -233,7 +259,6 @@
     color: #333;
     white-space: nowrap;
   }
-  
   .punto {
     width: 12px;
     height: 12px;
@@ -242,7 +267,6 @@
     position: relative;
     margin-right: 10px;
   }
-  
   .punto::after {
     content: "";
     position: absolute;
@@ -250,17 +274,83 @@
     left: 50%;
     transform: translateX(-50%);
     width: 2px;
-    height: 40px; /* Altura de la línea entre puntos */
+    height: 40px; 
     background: black;
   }
-
   .evento:last-child .punto::after {
     display: none;
   }
-  
   .detalle {
     font-family: 'Georgia', serif;
     font-style: italic;
     font-size: 1rem;
     color: #444;
+  }
+
+  .confirmacion {
+    background-color: #f8f0f8;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .confirmacion h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
+  #formulario-confirmacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  #formulario-confirmacion input,
+  #formulario-confirmacion select,
+  #formulario-confirmacion button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+  }
+  
+  #formulario-confirmacion button {
+    background-color: #a33c8c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #formulario-confirmacion button:hover {
+    background-color: #8b316f;
+  }  
+
+  .footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  
+  .footer p {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+
+  .redes a {
+    color: white;
+    margin: 10px 20px;
+    font-size: 35px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .redes a:hover {
+    color: #f1c40f;
   }

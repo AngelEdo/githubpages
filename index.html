@@ -6,6 +6,7 @@
   <title>XV Años - Michelle</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
@@ -14,15 +15,15 @@
   </div>
 
   <div id="contenido" class="oculto">
-    <section class="hero fade-up">
-      <h1>XV</h1>
-      <h2>Naomy De Carlo</h2>
-      <p>24 de julio, 2025 - 8:00 PM</p>
+    <section class="portada fade-up">
+      <h1 class="fade-up">XV</h1>
+      <h2 class="fade-up">Naomy De Carlo</h2>
+      <p class="fade-up">24 de julio, 2025 - 8:00 PM</p>
     </section>
 
     
   <section class="cuenta-regresiva fade-up">
-    <h2>Días restantes para que comience la fiesta:</h2>
+    <h2>Días restantes para que comience la fiesta </h2>
     <div class="contador">
       <div class="digito">
         <div id="dias">00</div>
@@ -48,21 +49,21 @@
     </section>
   </div>
 
-  <section class="ubicacion fade-up">
-    <i class="fade-up">lol</i>
-    <h2 class="fade-up">Codigo de Vestimenta</h2>
-    <h1 class="fade-up">Formal</h1>
-   </section>
-
-   <section class="hero fade-up">
-    <h1>Mis padrinos son</h1>
-    <h2>El angel</h2>
-    <p>Messi</p>
+  <section class="codigo-vestimenta fade-up">
+    <h2 class="fade-up">Código de vestimenta</h2>
+    <img src="https://media.istockphoto.com/id/1419873574/vector/icon-tuxedo-and-dress-for-celebration.jpg?s=612x612&w=0&k=20&c=p9rjtGA79GwD67dar9x71bkrR3shomARIK7cZx6-yog=" alt="Código de vestimenta" class="logo-vestimenta fade-up">
+    <p class="fade-up">Formal / Elegante</p>
   </section>
 
-  <section class="mapa fade-up">
-    <h2>Ubicación del evento</h2>
-    <p>Casa de piedra, León, Guanajuato - 08:00 PM</p>
+   <section class="padrinos fade-up">
+    <h1 class="fade-up">Mis padrinos son</h1>
+    <h2 class="fade-up">El angel</h2>
+    <p class="fade-up">Messi</p>
+  </section>
+
+  <section class="mapa mapa-salon fade-up">
+    <h2 class="fade-up">Ubicación del evento</h2>
+    <p class="fade-up">Casa de piedra, León, Guanajuato - 08:00 PM</p>
     
     <div class="contenedor-mapa">
       <iframe 
@@ -81,25 +82,31 @@
     </a>
   </section>
 
+  <section class="regalos fade-up">
+    <h1 class="fade-up">No olvides llevarme regalo</h1>
+    <h2 class="fade-up">Que sea de arriba de mil varos</h2>
+    <p class="fade-up">Messi</p>
+  </section>
+
   <section class="itinerario fade-up">
-    <h2>Itinerario</h2>
-    <div class="linea-tiempo">
-      <div class="evento">
+    <h2 class="fade-up">Itinerario</h2>
+    <div class="linea-tiempo fade-up">
+      <div class="evento fade-up">
         <span class="hora">07:00 pm</span>
         <span class="punto"></span>
-        <span class="detalle">Misa</span>
+        <span class="detalle">Ceremonia religiosa</span>
       </div>
-      <div class="evento">
+      <div class="evento fade-up">
         <span class="hora">08:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Recepción</span>
       </div>
-      <div class="evento">
+      <div class="evento fade-up">
         <span class="hora">09:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Cena</span>
       </div>
-      <div class="evento">
+      <div class="evento fade-up">
         <span class="hora">10:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Baile de los novios</span>
@@ -107,11 +114,11 @@
     </div>
   </section>
 
-  <section class="mapa fade-up">
-    <h2>Ceremonia religiosa </h2>
-    <p>Templlo Divino niño</p>
+  <section class="mapa mapa-ceremonia fade-up">
+    <h2 class="fade-up">Ceremonia religiosa </h2>
+    <p class="fade-up">Templlo Divino niño</p>
     
-    <div class="contenedor-mapa">
+    <div class="contenedor-mapa fade-up">
       <iframe 
         src="https://www.google.com/maps/embed?pb=..."
         width="100%" 
@@ -127,6 +134,37 @@
       Abrir en Google Maps
     </a>
   </section>
-  <script src="script.js"></script>
+
+  <section class="confirmacion fade-up">
+    <div id="bloque-confirmacion">
+      <h2>Confirma tu asistencia</h2>
+  
+      <form id="formulario-confirmacion">
+        <input type="text" id="nombre" placeholder="Tu nombre " required>
+  
+        <select id="asistencia" required>
+          <option value="">¿Asistirás?</option>
+          <option value="Sí, asistiré">Sí, asistiré</option>
+          <option value="No podré asistir">No podré asistir</option>
+        </select>
+  
+        <button type="submit">Confirmar</button>
+      </form>
+    </div>
+  
+    <p id="mensaje-confirmacion" style="display: none; margin-top: 20px; font-weight: bold; font-size: 4rem;"></p>
+  </section>
+  
+
+  <footer class="footer">
+    <p>Síguenos en nuestras redes sociales</p>
+    <div class="redes">
+      <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/5211234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
 </body>
 </html>
