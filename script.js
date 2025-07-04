@@ -9,6 +9,7 @@ carta.addEventListener('click', () => {
   setTimeout(() => {
     cartaContainer.style.display = 'none';
     contenido.classList.remove('oculto');
+    document.body.classList.remove('no-scroll');
     activarAnimaciones();
   }, 600);
 });
@@ -72,9 +73,14 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
   const mensaje = `Hola, soy ${nombre}. ${asistencia} a la fiesta de XV años .`;
 
   document.getElementById('bloque-confirmacion').style.display = 'none';
-
   const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
-  mensajeConfirmacion.textContent = `¡Gracias, ${nombre} Por "${asistencia}"`;
+
+  if (asistencia === "Sí, asistiré"){
+    mensajeConfirmacion.textContent = `Gracias, ${nombre}, por confirmar tu asistencia.`;
+  } else if (asistencia === "No podré asistir"){
+    mensajeConfirmacion.textContent = `Lo sentimos, ${nombre}, gracias por tu consideración.`;
+  }
+
   mensajeConfirmacion.style.display = 'block';
 
   const url = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;

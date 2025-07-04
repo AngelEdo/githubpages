@@ -7,6 +7,10 @@
     font-family: 'Arial', sans-serif;
     scroll-behavior: smooth;
   }
+  .no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
   
   #carta-container {
     display: flex;
@@ -57,7 +61,7 @@
     color: white;
   }
   .portada h1 {
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: 'Great Vibes', cursive;
     margin-bottom: 10px;
   }
@@ -68,6 +72,7 @@
   }
   .portada p {
     font-size: 1.2rem;
+    margin-top: 20px;
   }
   
   .cuenta-regresiva {
