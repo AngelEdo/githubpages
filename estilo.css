@@ -4,7 +4,7 @@
     box-sizing: border-box;
   }
   body {
-    font-family: 'Arial', sans-serif;
+    font-family: oblique bold 120% cursive;
     scroll-behavior: smooth;
   }
   .no-scroll {
@@ -13,11 +13,13 @@
   }
   
   #carta-container {
+    background: url('https://png.pngtree.com/thumb_back/fw800/background/20230927/pngtree-a-large-frame-with-gold-flowers-on-a-beige-background-image_13371465.jpg') no-repeat center center/cover;
+    background-size: 110% 102%;
+    padding: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: #f8f0f8;
   }
   #carta {
     width: 100%;
@@ -25,9 +27,15 @@
     height: auto;
     cursor: pointer;
     transition: transform 0.4s ease;
+    animation: latido 2s infinite;
   }
-  #carta:hover {
-    transform: scale(1.05);
+  @keyframes latido {
+    0%, 100% {
+      transform: scale(.9);
+    }
+    50% {
+      transform: scale(1);
+    }
   }
   
   .oculto {
@@ -57,13 +65,14 @@
   }
   
   .portada {
-    background: url('https://wallpapercave.com/wp/wp6805988.jpg') no-repeat center center/cover;
+    background: url('https://blog.invitacionesmodernas.com/wp-content/uploads/2023/05/1-trucos-fotos-nocturna-quinceanera-0023-2-1024x684.jpg') no-repeat center center/cover;
+    background-size: 100vw 100vh;
     color: white;
   }
   .portada h1 {
     font-size: 6rem;
     font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
+    padding-bottom: 60%;
   }
   .portada h2 {
     font-size: 2rem;
@@ -82,19 +91,16 @@
     color: #111;
     text-align: center;
   }
-  
   .cuenta-regresiva h2 {
     margin-bottom: 20px;
     font-size: 1.5rem;
   }
-  
   .contador {
     display: flex;
     justify-content: center;
     gap: 10px;
     flex-wrap: wrap;
   }
-  
   .digito {
     display: flex;
     flex-direction: column;
@@ -106,11 +112,9 @@
     color: white;
     font-family: 'Georgia', serif;
   }
-  
   .digito div {
     font-size: 2rem;
   }
-  
   .digito p {
     font-size: 0.8rem;
     margin-top: 6px;
@@ -118,8 +122,14 @@
   }
 
   .seccion-imagen {
-    background: url('Imagenes/portada.png') no-repeat center center/cover;
+    background: url('https://cdn0.hitched.co.uk/vendor/5079/3_2/1920/JPG/vermilion-ha-20170516091713799.jpeg') no-repeat center center/cover;
+    background-size: 100vw 100vh;
     color: white;
+  }
+  .seccion-imagen h2{
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    color: rgb(255, 255, 255);
+    padding-top: 40%;
   }
   
   .codigo-vestimenta {
@@ -147,21 +157,19 @@
   }
 
   .padrinos {
-    background: url('Imagenes/fondo2.png') no-repeat center center/cover;
+    background: url('https://www.theknot.com/tk-media/images/291f07be-4124-11e5-9816-22000aa61a3e~rs_729.h') no-repeat center center/cover;
+    background-size: 100vw 100vh;
     color: white;
   }
   .padrinos h1 {
-    font-size: 4rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
+    font-size: 4.2rem;
+    font-family: 'Allura', cursive;
+    padding-top: 60%;
+    padding-bottom: 10%;
   }
   .padrinos h2 {
-    font-size: 2rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
-  }
-  .padrinos p {
-    font-size: 1.2rem;
+    font-size: 2.3rem;
+    font-family: 'Allura', cursive;
   }
 
   .mapa {
@@ -199,6 +207,7 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
   .btn-maps {
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     margin-top: 20px;
     background: #252525;
@@ -210,25 +219,25 @@
     transition: background 0.3s ease;
   }
   .btn-maps:hover {
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
     background: #000000;
   }
 
   .regalos {
-    background: url('https://tse3.mm.bing.net/th/id/OIP.CYzm_Pix9jCmjUbLIflcKQHaEK?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    background: url('https://tse2.mm.bing.net/th/id/OIP.5OiqhFBloHBVz5ll8w_YiwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    background-size: 100vw 100vh;
     color: white;
   }
   .regalos h1 {
     font-size: 4rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
-  }
-  .regalos h2 {
-    font-size: 2rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
+    font-family: 'Allura', cursive;
+    padding-bottom: 70%;
+    color:#ffffff;
   }
   .regalos p {
-    font-size: 1.2rem;
+    font-size: 2rem;
+    margin-top: 10%;
+    color:#ffffff;
   }
   
   .itinerario {
@@ -299,8 +308,9 @@
   }
   
   .confirmacion h2 {
-    font-size: 1.6rem;
+    font-size: 3rem;
     margin-bottom: 20px;
+    font-family: 'Allura', cursive;
   }
   
   #formulario-confirmacion {
@@ -323,6 +333,7 @@
   }
   
   #formulario-confirmacion button {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     background-color: #a33c8c;
     color: white;
     border: none;
@@ -331,8 +342,21 @@
   }
   
   #formulario-confirmacion button:hover {
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
     background-color: #8b316f;
   }  
+
+  .agradecimiento {
+    background: url('https://tse4.mm.bing.net/th/id/OIP.ec7sW7KNrmm8UzicXk2UNAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    background-size: 100vw 100vh;
+    color: white;
+  }
+  .agradecimiento h2{
+    padding: 0 20%;
+    padding-top: 25%;
+    font-size: clamp(1.5rem, 6.1vw, 4rem);
+    color: rgb(51, 51, 51);
+  }
 
   .footer {
     background-color: #222;
