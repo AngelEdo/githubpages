@@ -4,10 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>XV Años - Michelle</title>
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="estilo.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
 </head>
 <body class="no-scroll">
 
@@ -15,18 +13,23 @@
     <img src="Imagenes/carta.png" alt="Carta cerrada" id="carta">
   </div>
 
-  <div id="contenido" class="oculto">
-    <section class="portada fade-up">
-      <h1 class="fade-up">XV</h1>
-      <h2 class="fade-up">Naomy </h2>
-      <h2 class="fade-up">Hernández De Carlo</h2>
-      <p class="fade-up">24 de julio, 2025 - 8:00 PM</p>
-    </section>
+  <audio id="musica" loop>
+    <source src="Musica.mp3" type="audio/mpeg">
+  </audio>
 
+  <div id="contenido" class="oculto">
+
+    <section class="imagen portada fade-up-imagen">
+      <h3 class="fade-up-texto">Mis</h3>
+      <h1 class="fade-up-texto">XV</h1>
+      <h4 class="fade-up-texto">Años</h4>
+      <h2 class="fade-up-texto">Naomy Hernández De Carlo</h2>
+      <p class="fade-up-texto">24 de julio, 2025 - 8:00 PM</p>
+    </section>
     
-  <section class="cuenta-regresiva fade-up">
-    <h2>Días restantes para que comience la fiesta </h2>
-    <div class="contador">
+  <section class="cuenta-regresiva fade-up-imagen">
+    <h2 class="fade-up-texto">Días restantes para que comience la fiesta </h2>
+    <div class="contador fade-up-texto">
       <div class="digito">
         <div id="dias">00</div>
         <p>días</p>
@@ -46,28 +49,49 @@
     </div>
   </section>
 
-    <section class="seccion-imagen fade-up">
-      <h2 class="fade-up">"Te esperamos con mucha alegría para celebrar este momento especial"</h2>
-    </section>
-  </div>
+  <section class="imagen fade-up-imagen" id="container-slider">    
+    <a href="javascript: funcionEjecutar('anterior');" class="arrowPrev"><i class="fas fa-chevron-circle-left"></i></a>
+    <a href="javascript: funcionEjecutar('siguiente');" class="arrowNext"><i class="fas fa-chevron-circle-right"></i></a>
+    <ul class="listslider">
+      <li><a itlist="itList_0" href="#" class="item-select-slid"></a></li>
+      <li><a itlist="itList_1" href="#"></a></li>
+      <li><a itlist="itList_2" href="#"></a></li>
+      <li><a itlist="itList_3" href="#"></a></li>
+    </ul>
+    <ul id="slider">
+      <li class="imagen" style="background-image: url('Imagenes/imagen3.png'); z-index:0; opacity: 1;">
+        <div class="content_slider">
+        <p class="fade-up-texto">Te esperamos con mucha alegria para celebrar este momento especial</p>
+        </div>
+      </li>
+      <li class="imagen" style="background-image: url('https://tse1.explicit.bing.net/th/id/OIP.ZqDpLh8b8ksbUytBNNA-gAHaIp?rs=1&pid=ImgDetMain&o=7&rm=3');">
+        <div class="content_slider"></div>
+      </li>
+      <li class="imagen" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.ZDOmzDGrHIdskbKrOXjaOwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3');">
+        <div class="content_slider"></div>
+      </li>
+      <li class="imagen" style="background-image: url('https://tse4.mm.bing.net/th/id/OIP.ZDOmzDGrHIdskbKrOXjaOwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3');">
+        <div class="content_slider"></div>
+      </li>
+     </ul>
+ </section>
 
-  <section class="codigo-vestimenta fade-up">
-    <h2 class="fade-up">Código de vestimenta</h2>
-    <img src="https://media.istockphoto.com/id/1419873574/vector/icon-tuxedo-and-dress-for-celebration.jpg?s=612x612&w=0&k=20&c=p9rjtGA79GwD67dar9x71bkrR3shomARIK7cZx6-yog=" alt="Código de vestimenta" class="logo-vestimenta fade-up">
-    <p class="fade-up">Formal / Elegante</p>
+  <section class="codigo-vestimenta fade-up-imagen">
+    <h2 class="fade-up-texto">Código de vestimenta</h2>
+    <img src="https://media.istockphoto.com/id/1419873574/vector/icon-tuxedo-and-dress-for-celebration.jpg?s=612x612&w=0&k=20&c=p9rjtGA79GwD67dar9x71bkrR3shomARIK7cZx6-yog=" alt="Código de vestimenta" class="logo-vestimenta fade-up-imagen">
+    <p class="fade-up-texto">Formal / Elegante</p>
   </section>
 
-   <section class="padrinos fade-up">
-    <h1 class="fade-up">Mis padrinos son</h1>
-    <h2 class="fade-up">Lupita Rodriguez</h2>
-    <h2 class="fade-up">Pepe Hernandez</h2>
+   <section class="imagen padrinos fade-up-imagen">
+    <h1 class="fade-up-texto">Mis padrinos son</h1>
+    <h2 class="fade-up-texto">Lupita Rodriguez y Pepe Hernandez</h2>
   </section>
 
-  <section class="mapa mapa-salon fade-up">
-    <h2 class="fade-up">Ubicación del evento</h2>
-    <p class="fade-up">Casa de piedra, León, Guanajuato - 08:00 PM</p>
+  <section class="mapa mapa-salon fade-up-imagen">
+    <h2 class="fade-up-texto">Ubicación del evento</h2>
+    <p class="fade-up-texto">Casa de piedra, León, Guanajuato - 08:00 PM</p>
     
-    <div class="contenedor-mapa">
+    <div class="contenedor-mapa fade-up-imagen">
       <iframe 
         src="https://www.google.com/maps/embed?pb=..."
         width="100%" 
@@ -79,36 +103,36 @@
       </iframe>
     </div>
   
-    <a class="btn-maps" href="https://maps.google.com/?q=Casa+de+piedra,+León,+Guanajuato" target="_blank">
+    <a class="btn-maps fade-up-texto" href="https://maps.google.com/?q=Casa+de+piedra,+León,+Guanajuato" target="_blank">
       Abrir en Google Maps
     </a>
   </section>
 
-  <section class="regalos fade-up">
-    <h1 class="fade-up">Sugerncia de reglo</h1>
-    <p class="fade-up">Mi mejor regalo es tu presencia pero si deseas darme un obsequio lo agradeceria mucho</p>
+  <section class="imagen regalos fade-up-imagen">
+    <h1 class="fade-up-texto">Sugerncia de reglo</h1>
+    <p class="fade-up-texto">Mi mejor regalo es tu presencia pero si deseas darme un obsequio lo agradeceria mucho</p>
 
   </section>
 
-  <section class="itinerario fade-up">
-    <h2 class="fade-up">Itinerario</h2>
-    <div class="linea-tiempo fade-up">
-      <div class="evento fade-up">
-        <span class="hora">07:00 pm</span>
+  <section class="itinerario fade-up-imagen">
+    <h2 class="fade-up-texto">Itinerario</h2>
+    <div class="linea-tiempo fade-up-texto">
+      <div class="evento fade-up-texto">
+        <span class="hora">10:00 am</span>
         <span class="punto"></span>
         <span class="detalle">Ceremonia religiosa</span>
       </div>
-      <div class="evento fade-up">
+      <div class="evento fade-up-texto">
         <span class="hora">08:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Recepción</span>
       </div>
-      <div class="evento fade-up">
+      <div class="evento fade-up-texto">
         <span class="hora">09:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Cena</span>
       </div>
-      <div class="evento fade-up">
+      <div class="evento fade-up-texto">
         <span class="hora">10:00 pm</span>
         <span class="punto"></span>
         <span class="detalle">Bals de quinceañera</span>
@@ -116,11 +140,11 @@
     </div>
   </section>
 
-  <section class="mapa mapa-ceremonia fade-up">
-    <h2 class="fade-up">Ceremonia religiosa </h2>
-    <p class="fade-up">Templlo Divino niño</p>
+  <section class="mapa mapa-ceremonia fade-up-imagen">
+    <h2 class="fade-up-texto">Ceremonia religiosa </h2>
+    <p class="fade-up-texto">Templlo Divino niño</p>
     
-    <div class="contenedor-mapa fade-up">
+    <div class="contenedor-mapa fade-up-texto">
       <iframe 
         src="https://www.google.com/maps/embed?pb=..."
         width="100%" 
@@ -131,19 +155,18 @@
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </div>
-  
     <a class="btn-maps" href="https://maps.google.com/?q=Casa+de+piedra,+León,+Guanajuato" target="_blank">
       Abrir en Google Maps
     </a>
   </section>
 
-  <section class="agradecimiento fade-up">
-    <h2 class="fade-up">"Gracias a dios por permitirme llegar a este momento de mi vida. Mis padres 
+  <section class="imagen agradecimiento fade-up-imagen">
+    <h2 class="fade-up-texto">"Gracias a dios por permitirme llegar a este momento de mi vida. Mis padres 
       por acompañarme a lo largo de estos años con tanto amor y a ti por formar parte 
       de mi historia. Ven Acompañame a celebrar..."</h2>
   </section>
 
-  <section class="confirmacion fade-up">
+  <section class="confirmacion fade-up-imagen">
     <div id="bloque-confirmacion">
       <h2>Confirma tu asistencia</h2>
   
@@ -162,7 +185,6 @@
   
     <p id="mensaje-confirmacion" style="display: none; margin-top: 20px; font-weight: bold; font-size: 3rem;"></p>
   </section>
-  
 
   <footer class="footer">
     <p>Síguenos en nuestras redes sociales</p>
@@ -172,6 +194,8 @@
       <a href="https://wa.me/5211234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
     </div>
   </footer>
+
+</div>
 
 <script src="script.js"></script>
 </body>

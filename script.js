@@ -6,6 +6,19 @@ carta.addEventListener('click', () => {
   cartaContainer.style.opacity = '0';
   cartaContainer.style.transition = 'opacity 0.6s ease';
 
+  const musica = document.getElementById('musica');
+  const tiempoInicio = 111;  
+  const tiempoFin = 233;
+  musica.currentTime = tiempoInicio;
+  musica.play();
+
+  const intervalo = setInterval(() => {
+   if (musica.currentTime >= tiempoFin) {
+     musica.pause();
+     clearInterval(intervalo);
+   }
+  }, 200);
+
   setTimeout(() => {
     cartaContainer.style.display = 'none';
     contenido.classList.remove('oculto');
@@ -15,10 +28,7 @@ carta.addEventListener('click', () => {
 });
 
 function activarAnimaciones() {
-  const elementos = document.querySelectorAll('.fade-up');
-  const opciones = { threshold: 0.1 };
-
-  const observer = new IntersectionObserver((entradas) => {
+  const observerTextos = new IntersectionObserver((entradas) => {
     entradas.forEach(entrada => {
       if (entrada.isIntersecting) {
         entrada.target.classList.add('visible');
@@ -26,10 +36,26 @@ function activarAnimaciones() {
         entrada.target.classList.remove('visible');
       }
     });
-  }, opciones);
+  }, { threshold: 0.2 });
 
-  elementos.forEach(el => observer.observe(el));
+  const observerImagenes = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('visible');
+      } else {
+        entrada.target.classList.remove('visible');
+      }
+    });
+  }, { threshold: 0.03 });
+
+  const textos = document.querySelectorAll('.fade-up-texto');
+  const imagenes = document.querySelectorAll('.fade-up-imagen');
+
+  textos.forEach(el => observerTextos.observe(el));
+  imagenes.forEach(el => observerImagenes.observe(el));
 }
+activarAnimaciones();
+
 
 function iniciarCuentaRegresiva(fechaEvento) {
   const cuenta = setInterval(() => {
@@ -76,9 +102,9 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
   const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
 
   if (asistencia === "Sí, asistiré"){
-    mensajeConfirmacion.textContent = `Gracias, ${nombre}, por confirmar tu asistencia.`;
+    mensajeConfirmacion.textContent = `Gracias ${nombre} por confirmar tu asistencia, te esperamos en la fiesta.`;
   } else if (asistencia === "No podré asistir"){
-    mensajeConfirmacion.textContent = `Lo sentimos, ${nombre}, gracias por tu consideración.`;
+    mensajeConfirmacion.textContent = `Lo sentimos ${nombre} gracias por tu consideración.`;
   }
 
   mensajeConfirmacion.style.display = 'block';
@@ -86,3 +112,45 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
   const url = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 });
+
+if(document.querySelector('.listslider')){
+  let link = document.querySelectorAll(".listslider li a");
+  link.forEach(function(link) {
+     link.addEventListener('click', function(e){
+        e.preventDefault();
+        let item = this.getAttribute('itlist');
+        let arrItem = item.split("_");
+        funcionEjecutar(arrItem[1]);
+        return false;
+     });
+   });
+}
+function funcionEjecutar(side){
+   let parentTarget = document.getElementById('slider');
+   let elements = parentTarget.getElementsByTagName('li');
+   let curElement, siguienteElement;
+   for(var i=0; i<elements.length;i++){
+       if(elements[i].style.opacity==1){
+           curElement = i;
+           break;
+       }
+   }
+   if(side == 'anterior' || side == 'siguiente'){
+       if(side=="anterior"){
+           siguienteElement = (curElement == 0)?elements.length -1:curElement -1;
+       }else{
+           siguienteElement = (curElement == elements.length -1)?0:curElement +1;
+       }
+   }else{
+       siguienteElement = side;
+       side = (curElement > siguienteElement)?'anterior':'siguiente';
+   }
+   
+   let elementSel = document.getElementsByClassName("listslider")[0].getElementsByTagName("a");
+   elementSel[curElement].classList.remove("item-select-slid");
+   elementSel[siguienteElement].classList.add("item-select-slid");
+   elements[curElement].style.opacity=0;
+   elements[curElement].style.zIndex =0;
+   elements[siguienteElement].style.opacity=1;
+   elements[siguienteElement].style.zIndex =1;
+}

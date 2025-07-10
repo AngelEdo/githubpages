@@ -1,10 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
   body {
-    font-family: oblique bold 120% cursive;
+    overflow-x: hidden;
+    margin: auto;
+    font-family: 'Playwrite NZ', cursive;
+    font-weight: 200;
+    font-style: normal;
     scroll-behavior: smooth;
   }
   .no-scroll {
@@ -13,16 +21,19 @@
   }
   
   #carta-container {
-    background: url('https://png.pngtree.com/thumb_back/fw800/background/20230927/pngtree-a-large-frame-with-gold-flowers-on-a-beige-background-image_13371465.jpg') no-repeat center center/cover;
-    background-size: 110% 102%;
-    padding: 10%;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230927/pngtree-a-large-frame-with-gold-flowers-on-a-beige-background-image_13371465.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 103vw 101vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   #carta {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     max-width: 800px;
     height: auto;
     cursor: pointer;
@@ -31,10 +42,10 @@
   }
   @keyframes latido {
     0%, 100% {
-      transform: scale(.9);
+      transform: scale(.6);
     }
     50% {
-      transform: scale(1);
+      transform: scale(.7);
     }
   }
   
@@ -43,51 +54,75 @@
   }
   
   section {
-    min-height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 20px;
     text-align: center;
   }
 
-  .fade-up {
+  .fade-up-texto {
     opacity: 0;
     transform: translateY(30px);
     filter: blur(6px);
-    transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+    transition: opacity 1.5s ease, transform 1.5s ease, filter 1.5s ease;
+  } 
+  .fade-up-imagen {
+    opacity: 0;
+    transform: translateY(50px);
+    filter: blur(6px);
+    transition: opacity 2.5s ease, transform 2.5s ease, filter 2.5s ease;
   }
-  .fade-up.visible {
+  .fade-up-texto.visible, .fade-up-imagen.visible {
     opacity: 1;
     transform: translateY(0);
     filter: blur(0);
-  }
+  }  
   
   .portada {
-    background: url('https://blog.invitacionesmodernas.com/wp-content/uploads/2023/05/1-trucos-fotos-nocturna-quinceanera-0023-2-1024x684.jpg') no-repeat center center/cover;
-    background-size: 100vw 100vh;
+    background: url('Imagenes/imagen1.png') no-repeat center center/cover;
     color: white;
   }
   .portada h1 {
-    font-size: 6rem;
+    font-size: clamp(8rem, 13vw, 20rem);
     font-family: 'Great Vibes', cursive;
-    padding-bottom: 60%;
+    position: absolute;
+    top: 10vh;   
+    left: 25vw;
+    right: 25vw;
+  }
+  .portada h3 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    position: absolute;
+    top: 5vh;   
+    left: 25vw;
+  }
+  .portada h4 {
+    font-size: clamp(1.2rem, 4vw, 2.5rem);
+    position: absolute;
+    top: 30vh;   
+    right: 25vw;
   }
   .portada h2 {
-    font-size: 2rem;
-    font-family: 'Great Vibes', cursive;
-    margin-bottom: 10px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    position: absolute;
+    top: 80vh;   
+    left: 10vw;
+    right: 10vw;
   }
   .portada p {
-    font-size: 1.2rem;
-    margin-top: 20px;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    position: absolute;
+    top: 90vh;   
+    left: 15vw;
+    right: 15vw;
   }
   
   .cuenta-regresiva {
     padding: 80px 0;
     min-height: auto; 
-    background-color: rgb(197, 191, 191);
+    background-color: rgba(248, 220, 222);
     color: #111;
     text-align: center;
   }
@@ -120,20 +155,9 @@
     margin-top: 6px;
     color: #ccc;
   }
-
-  .seccion-imagen {
-    background: url('https://cdn0.hitched.co.uk/vendor/5079/3_2/1920/JPG/vermilion-ha-20170516091713799.jpeg') no-repeat center center/cover;
-    background-size: 100vw 100vh;
-    color: white;
-  }
-  .seccion-imagen h2{
-    font-size: clamp(1.5rem, 8vw, 4rem);
-    color: rgb(255, 255, 255);
-    padding-top: 40%;
-  }
   
   .codigo-vestimenta {
-    background-color: rgb(197, 191, 191);
+    background-color: rgb(248, 220, 222);
     color: #000000;
     padding: 80px 20px;  
     min-height: auto;    
@@ -158,33 +182,44 @@
 
   .padrinos {
     background: url('https://www.theknot.com/tk-media/images/291f07be-4124-11e5-9816-22000aa61a3e~rs_729.h') no-repeat center center/cover;
-    background-size: 100vw 100vh;
     color: white;
+    overflow: hidden;
+  } 
+  .padrinos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 0;
   }
   .padrinos h1 {
-    font-size: 4.2rem;
-    font-family: 'Allura', cursive;
-    padding-top: 60%;
-    padding-bottom: 10%;
+    font-size: clamp(2.5rem, 6vw, 7rem);
+    position: absolute;
+    top: 10vh;   
+    left: 10vw;
+    right: 10vw;
+    z-index: 1;
   }
   .padrinos h2 {
-    font-size: 2.3rem;
-    font-family: 'Allura', cursive;
+    font-size: clamp(1.7rem, 4vw, 6rem);
+    position: absolute;
+    top: 70vh;   
+    left: 5vw;
+    right: 5vw;
+    z-index: 1;
   }
 
   .mapa {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(248, 220, 222);
     text-align: center;
     padding: 40px 20px;
   }
   .mapa-salon {
     min-height: auto;
-    background-color: rgb(185, 185, 185);
   }
   .mapa-ceremonia {
     padding: auto;
     min-height: auto;
-    background-color: rgb(185, 185, 185);
   }
   .mapa h2 {
     font-size: 1.4rem;
@@ -210,7 +245,7 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     margin-top: 20px;
-    background: #252525;
+    background: #383737;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -224,139 +259,175 @@
   }
 
   .regalos {
-    background: url('https://tse2.mm.bing.net/th/id/OIP.5OiqhFBloHBVz5ll8w_YiwAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
-    background-size: 100vw 100vh;
+    background: url('https://as1.ftcdn.net/v2/jpg/04/42/77/76/1000_F_442777658_XSIv5bPqm998muyiY19wSfDfmMhPV9OT.jpg') no-repeat center center/cover;
     color: white;
+    overflow: hidden;
+  } 
+  .regalos::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.03); 
+    z-index: 0;
   }
   .regalos h1 {
-    font-size: 4rem;
-    font-family: 'Allura', cursive;
-    padding-bottom: 70%;
-    color:#ffffff;
+    font-size: clamp(2.2rem, 5vw, 6rem);
+    position: absolute;
+    top: 10vh;   
+    left: 35vw;
+    right: 5vw;
+    color: #000000;
+    z-index: 1;
   }
   .regalos p {
-    font-size: 2rem;
-    margin-top: 10%;
-    color:#ffffff;
+    font-size: clamp(1.7rem, 3vw, 4rem);
+    position: absolute;
+    top: 45vh;   
+    left: 35vw;
+    right: 5vw;
+    color: #000000;
+    z-index: 1;
   }
   
   .itinerario {
-    padding: 6%;
-    min-height: auto;
+    width: 100vw;
+    max-height: auto;
     text-align: center;
+    margin: 17vh auto;
    }
   .itinerario h2 {
-     font-size: 1.6rem;
-     margin-bottom: 30px;
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    margin-bottom: 8vh;
+    padding-right: 5vw;
   }
   .linea-tiempo {
+    width: 100vw;
+    padding: 0 5vw;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     position: relative;
-    margin: 0 auto;
-    max-width: 300px;
-    padding-left: 40px;
   } 
   .evento {
-    position: relative;
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 9vh;
   }
   .hora {
-    width: 70px;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    width: 40%;
     text-align: right;
-    margin-right: 10px;
-    font-size: 1rem;
-    font-family: 'Georgia', serif;
+    font-family: 'Playwrite NZ', cursive;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 2vw;
     color: #333;
     white-space: nowrap;
   }
   .punto {
-    width: 12px;
-    height: 12px;
+    width: 10%;
+    position: relative;
+    width: clamp(15px, 1.2vw, 25px);
+    height: clamp(15px, 1.2vw, 25px);
     background: black;
     border-radius: 50%;
-    position: relative;
-    margin-right: 10px;
   }
   .punto::after {
     content: "";
     position: absolute;
-    top: 20px;
+    top: 150%;
     left: 50%;
     transform: translateX(-50%);
-    width: 2px;
-    height: 40px; 
+    width: clamp(1px, 0.15vw, 3px); 
+    height: clamp(55px, 4.5vw, 100px);
     background: black;
   }
   .evento:last-child .punto::after {
     display: none;
   }
   .detalle {
-    font-family: 'Georgia', serif;
-    font-style: italic;
-    font-size: 1rem;
-    color: #444;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    width: 50%;
+    margin-left: 2vw;
+    text-align: left;
+    font-family: 'Playwrite NZ', cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+  }
+
+  .agradecimiento {
+    background: url('https://tse4.mm.bing.net/th/id/OIP.ec7sW7KNrmm8UzicXk2UNAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    color: white;
+    overflow: hidden;
+  } 
+  .agradecimiento::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.03); 
+    z-index: 0;
+  }
+  .agradecimiento h2{
+    font-family: 'Playwrite NZ', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.3rem, 2.5vw, 4rem);
+    position: absolute;
+    top: 34vh;   
+    left: 31vw;
+    right: 5vw;
+    color: #000000;
+    z-index: 1;
   }
 
   .confirmacion {
     background-color: #f8f0f8;
     text-align: center;
-    padding: 50px 20px;
+    padding: 30vh 5vw;
   }
-  
   .confirmacion h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    font-family: 'Allura', cursive;
+    font-size: clamp(2.3rem, 4vw, 6rem);
+    position: absolute;
+    top: 10vh;   
+    left: 5vw;
+    right: 5vw;
   }
-  
   #formulario-confirmacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     max-width: 300px;
-    margin: 0 auto;
   }
   
   #formulario-confirmacion input,
   #formulario-confirmacion select,
   #formulario-confirmacion button {
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     width: 100%;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 1rem;
   }
-  
   #formulario-confirmacion button {
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    background-color: #a33c8c;
-    color: white;
+    background-color: rgb(244, 202, 206);
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
     transition: background 0.3s ease;
   }
-  
   #formulario-confirmacion button:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    background-color: #8b316f;
+    background-color: rgb(240, 184, 189);
   }  
-
-  .agradecimiento {
-    background: url('https://tse4.mm.bing.net/th/id/OIP.ec7sW7KNrmm8UzicXk2UNAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
-    background-size: 100vw 100vh;
-    color: white;
-  }
-  .agradecimiento h2{
-    padding: 0 20%;
-    padding-top: 25%;
-    font-size: clamp(1.5rem, 6.1vw, 4rem);
-    color: rgb(51, 51, 51);
-  }
 
   .footer {
     background-color: #222;
@@ -364,14 +435,16 @@
     text-align: center;
     padding: 30px 20px;
   }
-  
   .footer p {
+    font-family: "Shantell Sans", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
     color: white;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: clamp(1.2rem, 2vw, 3rem);
   }
-
   .redes a {
     color: white;
     margin: 10px 20px;
@@ -379,7 +452,138 @@
     text-decoration: none;
     transition: color 0.3s ease;
   }
-  
   .redes a:hover {
     color: #f1c40f;
   }
+
+  #container-slider
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+#slider {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+}
+#slider li {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100%;
+    height: 100%;
+    display: block;
+    -webkit-transition: opacity 2s;
+    -moz-transition: opacity 2s;
+    -ms-transition: opacity 2s;
+    -o-transition: opacity 2s;
+    transition: opacity 2s;
+    z-index: -1;
+    opacity: 0;
+}
+#container-slider .arrowPrev, #container-slider .arrowNext{
+    font-size: 35pt;
+    color: rgba(48, 47, 47, 0.65);
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 2; 
+}
+#container-slider .arrowNext {
+    left: initial;
+    right: 10px !important;
+}
+.content_slider{
+    padding: 15px 30px;
+    color: #FFF;
+    width: 100%;
+    height: 100%;
+}
+.content_slider div{
+    text-align: center;
+}
+.content_slider p {
+   font-size: clamp(1.8rem, 4vw, 6rem);
+   position: absolute;
+   top: 10vh;   
+   left: 15vw;
+   right: 15vw;
+   color: #000000;
+}
+#slider li .content_slider{
+    background: rgba(0, 0, 0, 0.05);
+    padding: 10px 125px;
+}
+.content_slider{
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listslider {
+    position: absolute;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    left: 50%;
+    bottom: 5%;
+    list-style: none;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+.listslider li {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+.listslider li a {
+    background: #CCC;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.item-select-slid {
+    background: #FFF  !important;
+}
+@media screen and (max-width: 460px){
+    #container-slider .arrowPrev, #container-slider .arrowNext{
+        font-size: 20pt;
+    }
+    #container-slider .arrowPrev{
+        left: 15px;
+    }
+    #container-slider .arrowNext{
+        right: 15px !important;
+    }
+    #slider{
+        height: 400px;
+        min-height: 400px;
+    }
+    #slider li .content_slider{
+        padding: 10px 35px;
+    }
+}
+
+.imagen, #slider li.imagen{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100vw 100vh;
+}
