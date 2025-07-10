@@ -81,7 +81,7 @@
   }  
   
   .portada {
-    background: url('Imagenes/imagen1.png') no-repeat center center/cover;
+    background: url('Imagenes/portada.png') no-repeat center center/cover;
     color: white;
   }
   .portada h1 {
