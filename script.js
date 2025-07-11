@@ -109,7 +109,7 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
 
   mensajeConfirmacion.style.display = 'block';
 
-  const url = `https://wa.me/5211234567890?text=${encodeURIComponent(mensaje)}`;
+  const url = `https://wa.me/524494764339?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 });
 
