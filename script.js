@@ -102,7 +102,7 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
   const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
 
   if (asistencia === "Sí, asistiré"){
-    mensajeConfirmacion.textContent = `Gracias ${nombre} por confirmar tu asistencia, te esperamos en la fiesta.`;
+    mensajeConfirmacion.textContent = `Gracias ${nombre} por confirmar tu asistencia, te esperamos en la fiesta`;
   } else if (asistencia === "No podré asistir"){
     mensajeConfirmacion.textContent = `Lo sentimos ${nombre} gracias por tu consideración.`;
   }
