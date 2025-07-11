@@ -104,19 +104,26 @@
     top: 30vh;   
     right: 25vw;
   }
-  .portada h2 {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+  .portada h2{
+    font-size: clamp(1.3rem, 3vw, 2rem);
+    position: absolute;
+    top: 69vh;   
+    left: 05vw;
+    right: 05vw;
+  }
+  .portada h5 {
+    font-size: clamp(1.3rem, 3vw, 2rem);
     position: absolute;
     top: 75vh;   
     left: 05vw;
     right: 05vw;
   }
   .portada p {
-    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-size: clamp(1.1rem, 3vw, 2rem);
     position: absolute;
     top: 85vh;   
-    left: 05vw;
-    right: 05vw;
+    left: 02vw;
+    right: 02vw;
   }
   
   .cuenta-regresiva {
@@ -201,19 +208,35 @@
     z-index: 0;
   }
   .padrinos h1 {
-    font-size: clamp(2.5rem, 6vw, 7rem);
+    font-size: clamp(2.5rem, 6.4vw, 7rem);
     position: absolute;
     top: 10vh;   
     left: 10vw;
     right: 10vw;
     z-index: 1;
   }
-  .padrinos h2 {
+  .padrinos h2{
     font-size: clamp(1.8rem, 2.5vw, 6rem);
     position: absolute;
-    top: 70vh;   
-    left: 15vw;
-    right: 15vw;
+    top: 65vh;   
+    left: 05vw;
+    right: 05vw;
+    z-index: 1;
+  }
+  .padrinos h5 {
+    font-size: clamp(1.5rem, 2.2vw, 6rem);
+    position: absolute;
+    top: 75vh;   
+    left: 05vw;
+    right: 05vw;
+    z-index: 1;
+  }
+  .padrinos h3 {
+    font-size: clamp(1.8rem, 2.5vw, 6rem);
+    position: absolute;
+    top: 83vh;   
+    left: 05vw;
+    right: 05vw;
     z-index: 1;
   }
 
