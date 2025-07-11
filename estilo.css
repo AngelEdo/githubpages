@@ -105,30 +105,35 @@
     right: 25vw;
   }
   .portada h2 {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     position: absolute;
-    top: 80vh;   
-    left: 10vw;
-    right: 10vw;
+    top: 75vh;   
+    left: 05vw;
+    right: 05vw;
   }
   .portada p {
-    font-size: clamp(1.2rem, 3vw, 2rem);
+    font-size: clamp(1.5rem, 3vw, 2rem);
     position: absolute;
-    top: 90vh;   
-    left: 15vw;
-    right: 15vw;
+    top: 85vh;   
+    left: 05vw;
+    right: 05vw;
   }
   
   .cuenta-regresiva {
-    padding: 80px 0;
-    min-height: auto; 
-    background-color: rgba(248, 220, 222);
+    width: 100vw;
+    height: 60vh;
+    background-image: url('Imagenes/margen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
     color: #111;
     text-align: center;
   }
   .cuenta-regresiva h2 {
-    margin-bottom: 20px;
-    font-size: 1.5rem;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    padding-bottom: 5vw;
+    font-size: clamp(1.3rem, 3vw, 3rem);
   }
   .contador {
     display: flex;
@@ -157,10 +162,13 @@
   }
   
   .codigo-vestimenta {
-    background-color: rgb(248, 220, 222);
-    color: #000000;
-    padding: 80px 20px;  
-    min-height: auto;    
+    width: 100vw;
+    height: 60vh;
+    background-image: url('Imagenes/margen.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    color: #000000;     
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,11 +209,11 @@
     z-index: 1;
   }
   .padrinos h2 {
-    font-size: clamp(1.7rem, 4vw, 6rem);
+    font-size: clamp(1.8rem, 2.5vw, 6rem);
     position: absolute;
     top: 70vh;   
-    left: 5vw;
-    right: 5vw;
+    left: 15vw;
+    right: 15vw;
     z-index: 1;
   }
 
@@ -291,9 +299,12 @@
   
   .itinerario {
     width: 100vw;
-    max-height: auto;
+    height: 100vh;
+    background-image: url('Imagenes/itinerario.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
     text-align: center;
-    margin: 17vh auto;
    }
   .itinerario h2 {
     font-size: clamp(2rem, 4.5vw, 3rem);
