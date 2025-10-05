@@ -129,7 +129,7 @@
   .cuenta-regresiva {
     width: 100vw;
     height: 60vh;
-    background-image: url('Imagenes/margen.png');
+    background-image: url('Imagenes/margen1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -171,7 +171,7 @@
   .codigo-vestimenta {
     width: 100vw;
     height: 60vh;
-    background-image: url('Imagenes/margen.png');
+    background-image: url('Imagenes/margen1.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
@@ -196,7 +196,7 @@
   }
 
   .padrinos {
-    background: url('https://www.theknot.com/tk-media/images/291f07be-4124-11e5-9816-22000aa61a3e~rs_729.h') no-repeat center center/cover;
+    background: url('Imagenes/padrinos.png') no-repeat center center/cover;
     color: white;
     overflow: hidden;
   } 
@@ -204,19 +204,19 @@
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.3); 
+    background-color: rgba(0, 0, 0, 0.2); 
     z-index: 0;
   }
   .padrinos h1 {
     font-size: clamp(2.5rem, 6.4vw, 7rem);
     position: absolute;
-    top: 10vh;   
+    top: 8vh;   
     left: 10vw;
     right: 10vw;
     z-index: 1;
   }
   .padrinos h2{
-    font-size: clamp(1.8rem, 2.5vw, 6rem);
+    font-size: clamp(1.6rem, 2.5vw, 6rem);
     position: absolute;
     top: 65vh;   
     left: 05vw;
@@ -224,7 +224,7 @@
     z-index: 1;
   }
   .padrinos h5 {
-    font-size: clamp(1.5rem, 2.2vw, 6rem);
+    font-size: clamp(1.3rem, 2.2vw, 6rem);
     position: absolute;
     top: 75vh;   
     left: 05vw;
@@ -232,7 +232,7 @@
     z-index: 1;
   }
   .padrinos h3 {
-    font-size: clamp(1.8rem, 2.5vw, 6rem);
+    font-size: clamp(1.6rem, 2.5vw, 6rem);
     position: absolute;
     top: 83vh;   
     left: 05vw;
@@ -241,7 +241,7 @@
   }
 
   .mapa {
-    background-color: rgb(248, 220, 222);
+    background-color: rgba(214, 237, 241); 
     text-align: center;
     padding: 40px 20px;
   }
@@ -276,8 +276,8 @@
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
     display: inline-block;
     margin-top: 20px;
-    background: #383737;
-    color: white;
+    background: rgb(127, 191, 201);
+    color: rgb(56, 56, 56);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 6px;
@@ -286,11 +286,11 @@
   }
   .btn-maps:hover {
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
-    background: #000000;
+    background: rgb(102, 174, 204);
   }
 
   .regalos {
-    background: url('https://as1.ftcdn.net/v2/jpg/04/42/77/76/1000_F_442777658_XSIv5bPqm998muyiY19wSfDfmMhPV9OT.jpg') no-repeat center center/cover;
+    background: url('Imagenes/regalos.png') no-repeat center center/cover;
     color: white;
     overflow: hidden;
   } 
@@ -304,18 +304,18 @@
   .regalos h1 {
     font-size: clamp(2.2rem, 5vw, 6rem);
     position: absolute;
-    top: 10vh;   
-    left: 35vw;
-    right: 5vw;
+    top: 8vh;   
+    left: 10vw;
+    right: 10vw;
     color: #000000;
     z-index: 1;
   }
   .regalos p {
-    font-size: clamp(1.7rem, 3vw, 4rem);
+    font-size: clamp(1.6rem, 3vw, 4rem);
     position: absolute;
-    top: 45vh;   
-    left: 35vw;
-    right: 5vw;
+    top: 25vh;   
+    left: 15vw;
+    right: 15vw;
     color: #000000;
     z-index: 1;
   }
@@ -323,15 +323,16 @@
   .itinerario {
     width: 100vw;
     height: 100vh;
-    background-image: url('Imagenes/itinerario.png');
+    background-image: url('Imagenes/margen3.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100% 100%;
     text-align: center;
    }
   .itinerario h2 {
-    font-size: clamp(2rem, 4.5vw, 3rem);
-    margin-bottom: 8vh;
+    color: rgb(102, 174, 204);
+    font-size: clamp(2.5rem, 4.5vw, 3rem);
+    margin-bottom: 4vh;
     padding-right: 5vw;
   }
   .linea-tiempo {
@@ -357,7 +358,7 @@
     font-weight: 400;
     font-style: normal;
     margin-right: 2vw;
-    color: #333;
+    color: rgb(34, 130, 172);
     white-space: nowrap;
   }
   .punto {
@@ -365,7 +366,7 @@
     position: relative;
     width: clamp(15px, 1.2vw, 25px);
     height: clamp(15px, 1.2vw, 25px);
-    background: black;
+    background: rgb(102, 174, 204);
     border-radius: 50%;
   }
   .punto::after {
@@ -376,7 +377,7 @@
     transform: translateX(-50%);
     width: clamp(1px, 0.15vw, 3px); 
     height: clamp(55px, 4.5vw, 100px);
-    background: black;
+    background: rgb(102, 174, 204);
   }
   .evento:last-child .punto::after {
     display: none;
@@ -389,11 +390,11 @@
     font-family: 'Playwrite NZ', cursive;
     font-weight: 400;
     font-style: normal;
-    color: #000000;
+    color: rgb(34, 130, 172);
   }
 
   .agradecimiento {
-    background: url('https://tse4.mm.bing.net/th/id/OIP.ec7sW7KNrmm8UzicXk2UNAAAAA?rs=1&pid=ImgDetMain&o=7&rm=3') no-repeat center center/cover;
+    background: url('Imagenes/agradecimiento.png') no-repeat center center/cover;
     color: white;
     overflow: hidden;
   } 
@@ -408,17 +409,17 @@
     font-family: 'Playwrite NZ', cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: clamp(1.3rem, 2.5vw, 4rem);
+    font-size: clamp(1.5rem, 2.5vw, 4rem);
     position: absolute;
-    top: 34vh;   
-    left: 31vw;
-    right: 5vw;
+    top: 25vh;   
+    left: 15vw;
+    right: 15vw;
     color: #000000;
     z-index: 1;
   }
 
   .confirmacion {
-    background-color: #f8f0f8;
+    background-color: rgba(230, 245, 247);
     text-align: center;
     padding: 30vh 5vw;
   }
@@ -452,7 +453,7 @@
   }
   #formulario-confirmacion button {
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    background-color: rgb(244, 202, 206);
+    background-color: rgb(168, 216, 224);
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
@@ -460,7 +461,7 @@
   }
   #formulario-confirmacion button:hover {
     box-shadow: 0 6px 15px rgba(0,0,0,0.4);
-    background-color: rgb(240, 184, 189);
+    background-color: rgb(127, 191, 201);
   }  
 
   .footer {
@@ -477,7 +478,7 @@
     color: white;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: clamp(1.2rem, 2vw, 3rem);
+    font-size: clamp(.9rem, 2vw, 3rem);
   }
   .redes a {
     color: white;
@@ -544,15 +545,15 @@
     text-align: center;
 }
 .content_slider p {
-   font-size: clamp(1.8rem, 4vw, 6rem);
+   font-size: clamp(1.4rem, 4vw, 6rem);
    position: absolute;
-   top: 10vh;   
+   top: 8vh;   
    left: 15vw;
    right: 15vw;
-   color: #000000;
+   color: #ffffff;
 }
 #slider li .content_slider{
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.1);
     padding: 10px 125px;
 }
 .content_slider{

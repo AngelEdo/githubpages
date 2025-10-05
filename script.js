@@ -7,17 +7,13 @@ carta.addEventListener('click', () => {
   cartaContainer.style.transition = 'opacity 0.6s ease';
 
   const musica = document.getElementById('musica');
-  const tiempoInicio = 111;  
-  const tiempoFin = 233;
-  musica.currentTime = tiempoInicio;
+  musica.currentTime = 0;
   musica.play();
 
-  const intervalo = setInterval(() => {
-   if (musica.currentTime >= tiempoFin) {
-     musica.pause();
-     clearInterval(intervalo);
-   }
-  }, 200);
+  musica.addEventListener('ended', () => {
+    musica.currentTime = 0;
+    musica.play();
+  });
 
   setTimeout(() => {
     cartaContainer.style.display = 'none';
@@ -64,7 +60,7 @@ function iniciarCuentaRegresiva(fechaEvento) {
 
     if (distancia < 0) {
       clearInterval(cuenta);
-      document.querySelector('.contador').innerHTML = '¡Ya comenzó!';
+      document.querySelector('.contador').innerHTML = '¡Ya comenzo!';
       return;
     }
 
@@ -80,7 +76,7 @@ function iniciarCuentaRegresiva(fechaEvento) {
   }, 1000);
 }
 
-const fechaEvento = new Date('2025-07-31T00:00:00').getTime();
+const fechaEvento = new Date('2025-11-08T00:00:00').getTime();
 iniciarCuentaRegresiva(fechaEvento);
 
 if ('scrollRestoration' in history) {
@@ -109,7 +105,7 @@ document.getElementById('formulario-confirmacion').addEventListener('submit', fu
 
   mensajeConfirmacion.style.display = 'block';
 
-  const url = `https://wa.me/524494764339?text=${encodeURIComponent(mensaje)}`;
+  const url = `https://wa.me/524492670283?text=${encodeURIComponent(mensaje)}`;
   window.open(url, '_blank');
 });
 
