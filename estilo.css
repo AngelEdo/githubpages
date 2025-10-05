@@ -218,7 +218,7 @@
   .padrinos h2{
     font-size: clamp(1.6rem, 2.5vw, 6rem);
     position: absolute;
-    top: 65vh;   
+    top: 75vh;   
     left: 05vw;
     right: 05vw;
     z-index: 1;
@@ -226,7 +226,7 @@
   .padrinos h5 {
     font-size: clamp(1.3rem, 2.2vw, 6rem);
     position: absolute;
-    top: 75vh;   
+    top: 83vh;   
     left: 05vw;
     right: 05vw;
     z-index: 1;
@@ -234,7 +234,7 @@
   .padrinos h3 {
     font-size: clamp(1.6rem, 2.5vw, 6rem);
     position: absolute;
-    top: 83vh;   
+    top: 87vh;   
     left: 05vw;
     right: 05vw;
     z-index: 1;
@@ -302,7 +302,7 @@
     z-index: 0;
   }
   .regalos h1 {
-    font-size: clamp(2.2rem, 5vw, 6rem);
+    font-size: clamp(2rem, 5vw, 6rem);
     position: absolute;
     top: 8vh;   
     left: 10vw;
@@ -311,7 +311,7 @@
     z-index: 1;
   }
   .regalos p {
-    font-size: clamp(1.6rem, 3vw, 4rem);
+    font-size: clamp(1.3rem, 3vw, 4rem);
     position: absolute;
     top: 25vh;   
     left: 15vw;
@@ -332,7 +332,6 @@
   .itinerario h2 {
     color: rgb(102, 174, 204);
     font-size: clamp(2.5rem, 4.5vw, 3rem);
-    margin-bottom: 4vh;
     padding-right: 5vw;
   }
   .linea-tiempo {
@@ -383,7 +382,7 @@
     display: none;
   }
   .detalle {
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    font-size: clamp(.8rem, 1.5vw, 2rem);
     width: 50%;
     margin-left: 2vw;
     text-align: left;
