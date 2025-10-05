@@ -76,7 +76,7 @@ function iniciarCuentaRegresiva(fechaEvento) {
   }, 1000);
 }
 
-const fechaEvento = new Date('2025-11-08T00:00:00').getTime();
+const fechaEvento = new Date('2025-11-08T20:00:00').getTime();
 iniciarCuentaRegresiva(fechaEvento);
 
 if ('scrollRestoration' in history) {
